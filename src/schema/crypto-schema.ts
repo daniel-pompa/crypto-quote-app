@@ -16,3 +16,9 @@ export const CryptoCurrencyResponseSchema = z.object({
 
 /** Schema for validating an array of cryptocurrency responses. */
 export const CryptoCurrenciesResponseSchema = z.array(CryptoCurrencyResponseSchema);
+
+/** Schema for validating currency pairs. */
+export const CurrencyPairSchema = z.object({
+  currency: z.string(),
+  cryptocurrency: z.string(),
+});
