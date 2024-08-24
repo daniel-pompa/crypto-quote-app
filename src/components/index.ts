@@ -1,1 +1,1 @@
-export * from './CryptoSearchForm';
+export * from './CoinSearchForm';

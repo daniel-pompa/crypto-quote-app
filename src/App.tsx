@@ -1,6 +1,15 @@
-import { CryptoSearchForm } from './components';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from 'react';
+import { CoinSearchForm } from './components';
+import { useCryptoStore } from './store';
 
 function App() {
+  const getData = useCryptoStore(state => state.fetchCryptoData);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
       <h1 className='app-title'>
@@ -10,7 +19,7 @@ function App() {
         Cotiza tus criptomonedas al instante con la API de CryptoCompare.
       </p>
       <div className='content'>
-        <CryptoSearchForm />
+        <CoinSearchForm />
       </div>
     </>
   );
