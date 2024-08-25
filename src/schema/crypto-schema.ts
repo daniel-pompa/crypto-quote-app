@@ -22,3 +22,13 @@ export const CurrencyPairSchema = z.object({
   currency: z.string(),
   cryptocurrency: z.string(),
 });
+
+/** Schema for validating cryptocurrency price responses. */
+export const CryptoPriceResponseSchema = z.object({
+  IMAGEURL: z.string(),
+  PRICE: z.string(),
+  HIGHDAY: z.string(),
+  LOWDAY: z.string(),
+  CHANGEPCT24HOUR: z.string(),
+  LASTUPDATE: z.string(),
+});

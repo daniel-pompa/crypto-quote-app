@@ -7,6 +7,7 @@ import { AlertMessage } from './AlertMessage';
 export const CoinSearchForm = () => {
   /** State for managing cryptocurrency data. */
   const cryptocurrencies = useCryptoStore(state => state.cryptocurrencies);
+  const fetchData = useCryptoStore(state => state.fetchData);
 
   /** State for managing currency pair selection. */
   const [currencyPair, setCurrencyPair] = useState<CurrencyPair>({
@@ -45,7 +46,7 @@ export const CoinSearchForm = () => {
 
     setError('');
 
-    // TODO: Consult API
+    fetchData(currencyPair);
   };
 
   return (
