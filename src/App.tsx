@@ -21,7 +21,6 @@ function App() {
       <div className='content'>
         <CoinSearchForm />
       </div>
-
       <CryptoPriceCard />
     </>
   );

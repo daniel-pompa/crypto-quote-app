@@ -1,14 +1,18 @@
 import { useMemo } from 'react';
 import { useCryptoStore } from '../store';
+import { Spinner } from './Spinner';
 
 export const CryptoPriceCard = () => {
   const result = useCryptoStore(state => state.result);
+  const loading = useCryptoStore(state => state.loading);
 
   const hasResult = useMemo(() => !Object.values(result).includes(''), [result]);
 
   const { IMAGEURL, PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE } = result;
 
   if (!hasResult) return null;
+
+  if (loading) return <Spinner />;
 
   return (
     <div className='crypto-card'>
