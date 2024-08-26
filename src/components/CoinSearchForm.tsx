@@ -43,15 +43,14 @@ export const CoinSearchForm = () => {
       setError('Por favor, seleccione una moneda y una criptomoneda.');
       return;
     }
-
     setError('');
-
     fetchData(currencyPair);
   };
 
   return (
     <form className='form' onSubmit={handleSubmit}>
       {error && <AlertMessage>{error}</AlertMessage>}
+      {/* Currencies */}
       <div className='form-field'>
         <label htmlFor='currency'>Moneda</label>
         <select
@@ -68,7 +67,7 @@ export const CoinSearchForm = () => {
           ))}
         </select>
       </div>
-
+      {/* Cryptocurrencies */}
       <div className='form-field'>
         <label htmlFor='cryptocurrency'>Criptomoneda</label>
         <select
@@ -88,7 +87,6 @@ export const CoinSearchForm = () => {
           ))}
         </select>
       </div>
-
       <input type='submit' value='Cotizar' />
     </form>
   );
