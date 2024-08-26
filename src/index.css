@@ -80,7 +80,6 @@ body {
 .content {
   background-color: var(--light);
   border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   margin: 3rem 0;
   padding: 6rem 2rem;
 }
@@ -157,4 +156,50 @@ body {
   background-color: #fee2e2;
   border-color: #fca5a5;
   color: #b91c1c;
+}
+
+/* Crypto Price Card */
+.crypto-card {
+  padding: 1rem;
+  background-color: var(--light);
+  border-radius: 0.5rem;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.crypto-image {
+  max-width: 100%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.crypto-info {
+  flex: 1;
+}
+
+.crypto-title {
+  font-family: var(--font-family-unbounded);
+}
+
+.price-value,
+.crypto-detail span,
+.change {
+  font-weight: bold;
+}
+
+.price-value,
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .crypto-image {
+    width: 50%;
+    max-width: 200px;
+  }
 }
