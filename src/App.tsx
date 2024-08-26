@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
-import { CoinSearchForm } from './components';
+import { CoinSearchForm, CryptoPriceCard } from './components';
 import { useCryptoStore } from './store';
 
 function App() {
@@ -21,6 +21,8 @@ function App() {
       <div className='content'>
         <CoinSearchForm />
       </div>
+
+      <CryptoPriceCard />
     </>
   );
 }
