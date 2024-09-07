@@ -122,7 +122,7 @@ The application will display a summary of the quote, including the current price
 
 ## Demo
 
-Explore the live demo of the application at the following link: [View Crypto Quote Demo](https://crypto-quote-app.vercel.app/)
+Explore the live demo of the application at the following link: [View Crypto Quote Demo](https://crypto-quote-react.vercel.app/)
 
 Discover the features live and see the app in action!
 
